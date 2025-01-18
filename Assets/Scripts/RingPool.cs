@@ -6,7 +6,7 @@ public class RingPool : MonoBehaviour
     [Header("Ring Model Prefabs Pool")]
     [SerializeField] private List<GameObject> ringPlatformPrefabs;
     [SerializeField] private Transform parentTransform;
-    private const int copiesPerPrefab = 3;
+    private const int copiesPerPrefab = 4;
 
     private List<GameObject> pool;
 

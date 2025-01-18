@@ -273,7 +273,7 @@ MonoBehaviour:
   baseRing: {fileID: 6151579241278936823, guid: 0de87dfec2e41eb499dbb776d0d319ce,
     type: 3}
   ringPool: {fileID: 637873674}
-  numberOfRingPlatforms: 10
+  numberOfRingPlatforms: 20
 --- !u!4 &347377681
 Transform:
   m_ObjectHideFlags: 0
@@ -349,7 +349,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 90
+  field of view: 82
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -375,8 +375,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434244862}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.07301941, y: -0.9069053, z: 0.17628446, w: 0.37565243}
-  m_LocalPosition: {x: 1.7649138, y: 1, z: 1.7649139}
+  m_LocalRotation: {x: 0.0021551736, y: 0.99463683, z: -0.10121249, w: 0.021189868}
+  m_LocalPosition: {x: -0.14787842, y: 0.4349841, z: 4.6275883}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
