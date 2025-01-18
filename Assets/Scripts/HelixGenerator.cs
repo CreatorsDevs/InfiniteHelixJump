@@ -1,16 +1,14 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class HelixGenerator : MonoBehaviour
 {
+    [SerializeField] private GameObject baseRing;
     [SerializeField] private RingPool ringPool;
     [SerializeField] private int numberOfRingPlatforms;
 
     private List<GameObject> pooledObjects;
+    bool generatedFirstHelix = false;
 
     private void Start()
     {
@@ -20,14 +18,25 @@ public class HelixGenerator : MonoBehaviour
 
     private void GenerateHelix()
     {
-        for (int i = 0; i < numberOfRingPlatforms; i++)
+        if (!generatedFirstHelix)
         {
-            GameObject selectedRingPlatform = GetRandomPlatform();
+            Vector3 pos = new Vector3(0, 0, 0);
+            Quaternion rotation = Quaternion.Euler(0, UnityEngine.Random.Range(0, -180), 0);
+            Instantiate(baseRing, pos, rotation);
+            generatedFirstHelix = true;
+        }
 
-            if (selectedRingPlatform != null)
+        if(generatedFirstHelix)
+        { 
+            for (int i = 1; i < numberOfRingPlatforms; i++)
             {
-                selectedRingPlatform.transform.SetPositionAndRotation(new Vector3(0, -i * (selectedRingPlatform.transform.localScale.y * 2), 0), Quaternion.Euler(0, UnityEngine.Random.Range(0, 360), 0));
-                selectedRingPlatform.SetActive(true);
+                GameObject selectedRingPlatform = GetRandomPlatform();
+
+                if (selectedRingPlatform != null)
+                {
+                    selectedRingPlatform.transform.SetPositionAndRotation(new Vector3(0, -i * (selectedRingPlatform.transform.localScale.y * 2), 0), Quaternion.Euler(0, UnityEngine.Random.Range(0, 360), 0));
+                    selectedRingPlatform.SetActive(true);
+                }
             }
         }
     }

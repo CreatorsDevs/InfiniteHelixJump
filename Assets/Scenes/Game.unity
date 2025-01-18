@@ -270,6 +270,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db821c66084128e488bd6789b2cb39a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseRing: {fileID: 6151579241278936823, guid: 0de87dfec2e41eb499dbb776d0d319ce,
+    type: 3}
   ringPool: {fileID: 637873674}
   numberOfRingPlatforms: 10
 --- !u!4 &347377681
@@ -373,13 +375,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434244862}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.08717229, y: 0.8995905, z: -0.21045253, w: -0.37262273}
-  m_LocalPosition: {x: 1.7649138, y: 1.2354395, z: 1.7649139}
+  m_LocalRotation: {x: 0.07301941, y: -0.9069053, z: 0.17628446, w: 0.37565243}
+  m_LocalPosition: {x: 1.7649138, y: 1, z: 1.7649139}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 22, y: -135, z: 0}
 --- !u!114 &434244866
 MonoBehaviour:
   m_ObjectHideFlags: 0
