@@ -241,6 +241,52 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &347377679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 347377681}
+  - component: {fileID: 347377680}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &347377680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347377679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db821c66084128e488bd6789b2cb39a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ringPool: {fileID: 637873674}
+  numberOfRingPlatforms: 10
+--- !u!4 &347377681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347377679}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &434244862
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,9 +424,68 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!1 &637873673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 637873675}
+  - component: {fileID: 637873674}
+  m_Layer: 0
+  m_Name: RingPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &637873674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637873673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c97863cf286bcc545bd5fd7f60b52c27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ringPlatformPrefabs:
+  - {fileID: 6151579241278936823, guid: 3238b964d2b33464da75a4b9ad6e5f6e, type: 3}
+  - {fileID: 6151579241278936823, guid: 8e1ec4c3447f62e429683e75eabee1ab, type: 3}
+  - {fileID: 6151579241278936823, guid: a31db747f771b8f4097e43873e21f0b5, type: 3}
+  - {fileID: 6151579241278936823, guid: e684e3f6d35557c44b8492e77f183070, type: 3}
+  - {fileID: 6151579241278936823, guid: a6bab020e9deaa945b42381cc01f3c0c, type: 3}
+  - {fileID: 6151579241278936823, guid: 0e0b9232ee3545a4f8cf5362f40805d6, type: 3}
+  - {fileID: 6151579241278936823, guid: 006766494d01fdf4894892e1eb20c41f, type: 3}
+  - {fileID: 6151579241278936823, guid: 0b25c54fb6ff881448a83e5e109556e7, type: 3}
+  - {fileID: 6151579241278936823, guid: 7800c1cda2ba01c42b78e24c5e4a92e0, type: 3}
+  - {fileID: 6151579241278936823, guid: e5032dea06f3dfe4dafc2dfc7d4eb76e, type: 3}
+  - {fileID: 6151579241278936823, guid: cb6fda93629db9a478328371c21a593a, type: 3}
+  parentTransform: {fileID: 637873675}
+--- !u!4 &637873675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637873673}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 434244865}
   - {fileID: 321043199}
+  - {fileID: 347377681}
+  - {fileID: 637873675}
