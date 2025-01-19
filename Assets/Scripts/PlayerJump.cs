@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-    [SerializeField] private float jumpForce;
+    [SerializeField] private float jumpHeight;
     private Rigidbody rb;
 
     void Start()
@@ -16,8 +16,8 @@ public class PlayerJump : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("RingPlatform"))
         {
-            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            float jumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(Physics.gravity.y) * jumpHeight);
+            rb.velocity = new (rb.velocity.x, jumpVelocity, rb.velocity.z);
         }
     }
 }
