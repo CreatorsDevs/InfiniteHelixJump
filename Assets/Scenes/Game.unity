@@ -272,6 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ringPool: {fileID: 637873674}
   numberOfRingPlatforms: 20
+  playerTransform: {fileID: 472313180}
 --- !u!4 &347377681
 Transform:
   m_ObjectHideFlags: 0

@@ -6,10 +6,12 @@ public class HelixGenerator : MonoBehaviour
 {
     [SerializeField] private RingPool ringPool;
     [SerializeField] private int numberOfRingPlatforms;
-
+    [SerializeField] private Transform playerTransform;
+    
+    private const float platformHeight = 2f;
     private List<GameObject> pooledObjects;
+    private List<GameObject> activeObjects = new();
     private bool generatedFirstHelix = false;
-    private int randomIndex;
 
     IEnumerator Start()
     {
@@ -18,6 +20,11 @@ public class HelixGenerator : MonoBehaviour
         if(!generatedFirstHelix && pooledObjects != null)
             GenerateFirstHelix();
         GenerateHelix();
+    }
+
+    private void Update()
+    {
+        RecyclePlatforms();
     }
 
     private void GenerateFirstHelix()
@@ -30,6 +37,7 @@ public class HelixGenerator : MonoBehaviour
             baseRing.transform.SetLocalPositionAndRotation(pos, rotation);
             baseRing.SetActive(true);
             generatedFirstHelix = true;
+            activeObjects.Add(baseRing);
         }
     }
     private void GenerateHelix()
@@ -38,14 +46,46 @@ public class HelixGenerator : MonoBehaviour
         {
             for (int i = 1; i < numberOfRingPlatforms; i++)
             {
-                GameObject selectedRingPlatform = GetRandomPlatform();
+                float yPosition = -i * platformHeight;
+
+                AddPlatformAt(yPosition);
+                /*GameObject selectedRingPlatform = GetRandomPlatform();
 
                 if (selectedRingPlatform != null)
                 {
                     selectedRingPlatform.transform.SetPositionAndRotation(new Vector3(0, -i * (selectedRingPlatform.transform.localScale.y * 2), 0), Quaternion.Euler(0, UnityEngine.Random.Range(0, 360), 0));
                     selectedRingPlatform.SetActive(true);
-                }
+                    activeObjects.Add(selectedRingPlatform);
+                }*/
             }
+        }
+    }
+
+    private void AddPlatformAt(float yPosition)
+    {
+        GameObject selectedRingPlatform = GetRandomPlatform();
+
+        if (selectedRingPlatform != null)
+        {
+            selectedRingPlatform.transform.SetPositionAndRotation(new Vector3(0, yPosition, 0), Quaternion.Euler(0, UnityEngine.Random.Range(0, 360), 0));
+            selectedRingPlatform.SetActive(true);
+            activeObjects.Add(selectedRingPlatform);
+        }
+    }
+
+    private void RecyclePlatforms()
+    {
+        if (activeObjects.Count == 0) return;
+
+        GameObject topPlatform = activeObjects[0];
+        if(playerTransform.position.y < topPlatform.transform.position.y - platformHeight * 1.5f)
+        {
+            topPlatform.SetActive(false);
+            ringPool.ReturnToPool(topPlatform);
+            activeObjects.RemoveAt(0);
+
+            float newYposition = activeObjects[activeObjects.Count - 1].transform.position.y - platformHeight;
+            AddPlatformAt(newYposition);
         }
     }
 
@@ -65,7 +105,7 @@ public class HelixGenerator : MonoBehaviour
         {
             for(int i=0; i<pooledObjects.Count; i++)
             {
-                randomIndex = UnityEngine.Random.Range(0, pooledObjects.Count);
+                int randomIndex = UnityEngine.Random.Range(0, pooledObjects.Count);
                 if (!pooledObjects[randomIndex].activeInHierarchy)
                 {
                     GameObject platform = pooledObjects[randomIndex];
