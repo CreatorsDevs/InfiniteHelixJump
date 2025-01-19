@@ -47,16 +47,7 @@ public class HelixGenerator : MonoBehaviour
             for (int i = 1; i < numberOfRingPlatforms; i++)
             {
                 float yPosition = -i * platformHeight;
-
                 AddPlatformAt(yPosition);
-                /*GameObject selectedRingPlatform = GetRandomPlatform();
-
-                if (selectedRingPlatform != null)
-                {
-                    selectedRingPlatform.transform.SetPositionAndRotation(new Vector3(0, -i * (selectedRingPlatform.transform.localScale.y * 2), 0), Quaternion.Euler(0, UnityEngine.Random.Range(0, 360), 0));
-                    selectedRingPlatform.SetActive(true);
-                    activeObjects.Add(selectedRingPlatform);
-                }*/
             }
         }
     }
