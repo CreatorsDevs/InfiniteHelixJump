@@ -270,8 +270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db821c66084128e488bd6789b2cb39a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseRing: {fileID: 6151579241278936823, guid: 0de87dfec2e41eb499dbb776d0d319ce,
-    type: 3}
   ringPool: {fileID: 637873674}
   numberOfRingPlatforms: 20
 --- !u!4 &347377681
@@ -544,7 +542,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.2, z: 0.67}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -620,6 +618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ringPlatformPrefabs:
+  - {fileID: 6151579241278936823, guid: 0de87dfec2e41eb499dbb776d0d319ce, type: 3}
   - {fileID: 6151579241278936823, guid: 3238b964d2b33464da75a4b9ad6e5f6e, type: 3}
   - {fileID: 6151579241278936823, guid: 8e1ec4c3447f62e429683e75eabee1ab, type: 3}
   - {fileID: 6151579241278936823, guid: a31db747f771b8f4097e43873e21f0b5, type: 3}
@@ -659,7 +658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d612f5bb27e874742bc6b38b165f2803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 225
+  rotationSpeed: 300
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

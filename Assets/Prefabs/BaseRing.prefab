@@ -243,7 +243,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5a5f45419deefdc4ba26c92f0611798f,
         type: 3}
       propertyPath: m_TagString
-      value: RingPlatform
+      value: BaseRing
       objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 5a5f45419deefdc4ba26c92f0611798f,
         type: 3}
