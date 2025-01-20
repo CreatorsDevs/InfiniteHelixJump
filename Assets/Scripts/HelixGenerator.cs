@@ -77,6 +77,7 @@ public class HelixGenerator : MonoBehaviour
             topPlatform.SetActive(false);
             ringPool.ReturnToPool(topPlatform);
             AudioManager.Instance.Play("Fall");
+            GameManager.Instance.AddScore(5);
             activeObjects.RemoveAt(0);
 
             float newYposition = activeObjects[activeObjects.Count - 1].transform.position.y - platformHeight;
