@@ -17,6 +17,7 @@ public class PlayerJump : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("RingPlatform"))
         {
+            AudioManager.Instance.Play("Bounce");
             float jumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(Physics.gravity.y) * jumpHeight);
             rb.velocity = new (rb.velocity.x, jumpVelocity, rb.velocity.z);
 
