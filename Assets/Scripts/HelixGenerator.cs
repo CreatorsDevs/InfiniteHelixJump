@@ -13,7 +13,7 @@ public class HelixGenerator : MonoBehaviour
     private List<GameObject> activeObjects = new();
     private bool generatedFirstHelix = false;
 
-    IEnumerator Start()
+    private IEnumerator Start()
     {
         pooledObjects = ringPool.GetPool();
         yield return null;
@@ -24,7 +24,10 @@ public class HelixGenerator : MonoBehaviour
 
     private void Update()
     {
-        RecyclePlatforms();
+        if(GameManager.Instance.GameStarted)
+        {
+            RecyclePlatforms();
+        }
     }
 
     private void GenerateFirstHelix()

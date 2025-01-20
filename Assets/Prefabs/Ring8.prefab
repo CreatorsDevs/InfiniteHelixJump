@@ -198,7 +198,7 @@ PrefabInstance:
     - target: {fileID: -6733177361254619370, guid: 5a5f45419deefdc4ba26c92f0611798f,
         type: 3}
       propertyPath: m_TagString
-      value: RingPlatform
+      value: DeadZone
       objectReference: {fileID: 0}
     - target: {fileID: -5568371526223589888, guid: 5a5f45419deefdc4ba26c92f0611798f,
         type: 3}
@@ -328,7 +328,7 @@ PrefabInstance:
     - target: {fileID: 6512510688612296998, guid: 5a5f45419deefdc4ba26c92f0611798f,
         type: 3}
       propertyPath: m_TagString
-      value: RingPlatform
+      value: DeadZone
       objectReference: {fileID: 0}
     - target: {fileID: 6732398567079961185, guid: 5a5f45419deefdc4ba26c92f0611798f,
         type: 3}

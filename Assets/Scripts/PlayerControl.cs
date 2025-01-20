@@ -7,8 +7,10 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
-        HandleInput();
-        RotateHelix();
+        if (GameManager.Instance.GameStarted)
+        {
+            HandleInput();
+        }
     }
 
     private void HandleInput()
@@ -30,6 +32,7 @@ public class PlayerControl : MonoBehaviour
         {
             rotationInput = 1;
         }
+        RotateHelix();
 
     }
 

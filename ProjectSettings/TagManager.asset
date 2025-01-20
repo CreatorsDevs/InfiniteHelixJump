@@ -6,6 +6,7 @@ TagManager:
   tags:
   - RingPlatform
   - BaseRing
+  - DeadZone
   layers:
   - Default
   - TransparentFX

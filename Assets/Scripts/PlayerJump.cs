@@ -27,6 +27,11 @@ public class PlayerJump : MonoBehaviour
                 SpawnSplash(collisionPoint, collision.gameObject);
             }
         }
+        if(collision.gameObject.CompareTag("DeadZone"))
+        {
+            AudioManager.Instance.Play("GameOver");
+            GameManager.Instance.GameOver();
+        }
     }
 
     private void SpawnSplash(Vector3 position, GameObject platform)
