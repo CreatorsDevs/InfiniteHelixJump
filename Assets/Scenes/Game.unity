@@ -439,7 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 472313180}
-  offset: {x: 0, y: 0.5, z: 0}
+  offset: {x: 0, y: 0.8, z: 0}
   smoothSpeed: 5
 --- !u!1 &472313176
 GameObject:
@@ -588,6 +588,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpHeight: 0.8
+  splashPrefab: {fileID: 486042125525336857, guid: fabca477b4e4c674d8e924255b5740e4,
+    type: 3}
 --- !u!1 &637873673
 GameObject:
   m_ObjectHideFlags: 0
