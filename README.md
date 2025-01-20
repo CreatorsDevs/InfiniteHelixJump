@@ -1,4 +1,4 @@
-# **Helix Jump Game**
+# **Infinite Helix Jump Game**
 
 ## Overview
 Welcome to **Helix Jump**, an exciting 3D platform game where you control a bouncing ball that descends through a procedurally generated helix structure. Your goal is to maneuver the ball strategically to avoid falling into dangerous zones, pass through gaps between platforms, and aim for the highest score!
