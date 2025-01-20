@@ -40,4 +40,4 @@ Welcome to **Helix Jump**, an exciting 3D platform game where you control a boun
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/HelixJump.git
+   git clone https://github.com/CreatorsDevs/InfiniteHelixJump.git
