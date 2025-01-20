@@ -710,6 +710,12 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Select
+    clip: {fileID: 8300000, guid: 7187e1e1b65458f4599466f7f2aca962, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &1998828142
 Transform:
   m_ObjectHideFlags: 0
