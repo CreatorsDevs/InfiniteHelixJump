@@ -190,7 +190,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4279107839
-  m_fontColor: {r: 1, g: 0, b: 0.056643486, a: 1}
+  m_fontColor: {r: 0.9411765, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2266,6 +2266,12 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1
     loop: 0
+    source: {fileID: 0}
+  - name: BgMusic
+    clip: {fileID: 8300000, guid: 6ebd8d03b8a4a2143a5f73c305cb2b9c, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
 --- !u!4 &1998828142
 Transform:
